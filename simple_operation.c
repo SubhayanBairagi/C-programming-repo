@@ -4,6 +4,7 @@ float addition(float x,float y);
 float substraction(float h,float j);
 float multliplication(float v,float b);
 float divide(float s, float d);
+float trigonometry(float d);
 void main() 
 {
    char  q;
