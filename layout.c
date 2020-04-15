@@ -23,8 +23,8 @@ int main()
         switch (q)
         {
             case 'a':
-                printf("press\n\t1: to add\n\t2: substract\n\t3: multiplication\n\t4: divide\n\t* to exit\n\t");
-                scanf("%d",&t);
+                printf("press\n\t1: to add\n\t2: substract\n\t3: multiplication\n\t4: divide\n\t5 to exit\n\t");
+                scanf("\n%d",&t);
                 
                 switch(t)
                 {
@@ -52,7 +52,7 @@ int main()
                             div = divide(w,r);
                             printf("%.2f\n\n",div);
                             break; 
-                    case '*':
+                    case 5:
                             exit(0);
                             break;
 
@@ -65,7 +65,7 @@ int main()
 
             case 'b':
                 printf("Enter the number:\n\t1: for normal trigonometric functions\n\t2: for inverse trigonometric functions\n\t");
-                scanf("%d",&s);
+                scanf("\n%d",&s);
 
                 switch(s)
                 {
@@ -176,17 +176,19 @@ int main()
                                     printf("invalid input\n\t");
                                     break;
                             }
-                        break;   
-
-
-                
-        
-
-
-        
-        default:
+                         break;   
+                    default:
+                    printf("please enter a valid input\n\t");
+                    break;
+                }
             break;
+
+            case 'c':
+                
+                
+                    
         }
+    
     }
     return 0;
 }
