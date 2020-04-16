@@ -13,6 +13,11 @@ float cubevol(float w);
 float spherevol(float w);
 float cylindervol(float w,float r);
 float leapyear(int f);
+float temp (float x);
+float height (float x);
+float length (float x);
+float tim (float x);
+
 int main()
 {
     char q;
@@ -276,6 +281,50 @@ int main()
                 }
             break;
 
+            case 'd':
+                        while(3)
+                        {
+                        printf("Enter\n\t1: convert fahrenheit to celsius\n\t2: convert cm to ft.\n\t3: convert km to mile\n\t4: min to hour\n\t");
+                        printf ("press 5 to exit\n\t");
+                        scanf ("%d", &s);
+
+                        switch (s)
+                            {
+                            case 1:
+                            printf ("please enter the value in fahrenheit:");
+                            scanf ("%f", &w);
+                            z = temp (w);
+                            printf ("the value in celsius is: %.2f degree celsius\n\t", z);
+                            break;
+                            case 2:
+                            printf ("please enter the height in cm:\n\t");
+                            scanf ("%f", &w);
+                            z = height (w); 
+                            printf ("the height is ft is: %.2f\n\t", z);
+                            break;
+                            case 3:
+                            printf ("please enter the length is KM: \n\t ");
+                            scanf ("%f", &w);
+                            z = length (w);
+                            printf ("The length in mile: %.2f\n\t", z);
+                            break;
+                            case 4:
+                            printf ("please enter the minutes: \n\t");
+                            scanf ("%f", &w);
+                            z = tim (w);
+                            printf ("it is %.2f hours\n\t", z);
+                            break;
+                            case 5:
+                            exit (0);
+                            break;
+                            default:
+                            printf ("please enter a valid input\n\t");
+                            break;
+
+                            }
+                        }
+                    break;    
+
             
                 
                 
@@ -357,6 +406,31 @@ float leapyear(int f)
     printf("this is a leap year\n\t");
   else
     printf("this is not a leap year\n\t");
+}
+
+float temp (float x)
+{
+    float b;
+    b = (5.0/9.0)*(x-32);
+    return b;
+}
+float height (float x)
+{
+    float b;
+    b = x/30.48;
+    return b;
+}
+float length (float x)
+{
+    float b;
+    b = x/1.609;
+    return b;
+}
+float tim (float x)
+{
+    float b;
+    b = x/60;
+    return b;
 }
 
 
