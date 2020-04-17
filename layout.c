@@ -92,37 +92,37 @@ int main()
                                 printf("Enter the value: \n");
                                 scanf("%f",&w);
                                 z = sin(w);
-                                printf("the sin value of %f is %f",w,z);
+                                printf("the sin value of %f is %f\n",w,z);
                             break;
                             case 2:
                                 printf("Enter the value: \n");
                                 scanf("%f",&w);
                                 z = cos(w);
-                                printf("the cos value of %f is %f",w,z);
+                                printf("the cos value of %f is %f\n",w,z);
                             break;
                             case 3:
                                 printf("Enter the value: \n");
                                 scanf("%f",&w);
                                 z = tan(w);
-                                printf("the tan value of %f is %f",w,z);
+                                printf("the tan value of %f is %f\n",w,z);
                             break;
                             case 4:
                                 printf("Enter the value: \n");
                                 scanf("%f",&w);
                                 z = 1/tan(w);
-                                printf("the cot value of %f is %f",w,z);
+                                printf("the cot value of %f is %f\n",w,z);
                             break;
                             case 5:
                                 printf("Enter the value: \n");
                                 scanf("%f",&w);
                                 z = 1/cos(w);
-                                printf("the sec value of %f is %f",w,z);
+                                printf("the sec value of %f is %f\n",w,z);
                             break;
                             case 6:
                                 printf("Enter the value: \n");
                                 scanf("%f",&w);
                                 z = 1/sin(w);
-                                printf("the cosec value of %f is %f",w,z);
+                                printf("the cosec value of %f is %f\n",w,z);
                             break;
                             case 7:
                                 exit(0);
@@ -143,42 +143,42 @@ int main()
                                     printf("Enter the value: \n");
                                     scanf("%f",&w);
                                     z = asin(w);
-                                    printf("the sin^-1 value of %f is %f",w,z);
+                                    printf("the sin^-1 value of %f is %f\n",w,z);
                                     
                                     break;
                                 case 2:
                                     printf("Enter the value: \n");
                                     scanf("%f",&w);
                                     z = acos(w);
-                                    printf("the cos^-1 value of %f is %f",w,z);
+                                    printf("the cos^-1 value of %f is %f\n",w,z);
                                     
                                     break;
                                 case 3:
                                     printf("Enter the value: \n");
                                     scanf("%f",&w);
                                     z = atan(w);
-                                    printf("the tan^-1 value of %f is %f",w,z);
+                                    printf("the tan^-1 value of %f is %f\n",w,z);
                                     
                                     break;
                                 case 4:
                                     printf("Enter the value: \n");
                                     scanf("%f",&w);
                                     z = 1/atan(w);
-                                    printf("the cot^-1 value of %f is %f",w,z);
+                                    printf("the cot^-1 value of %f is %f\n",w,z);
                                     
                                     break;
                                 case 5:
                                     printf("Enter the value: \n");
                                     scanf("%f",&w);
                                     z = 1/acos(w);
-                                    printf("the sec^-1 value of %f is %f",w,z);
+                                    printf("the sec^-1 value of %f is %f\n",w,z);
                                     
                                     break;
                                 case 6:
                                     printf("Enter the value: \n");
                                     scanf("%f",&w);
                                     z = 1/asin(w);
-                                    printf("the cosec^-1 value of %f is %f",w,z);
+                                    printf("the cosec^-1 value of %f is %f\n",w,z);
                                     
                                     break;
                                 case 7:
