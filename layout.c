@@ -17,12 +17,16 @@ float temp (float x);
 float height (float x);
 float length (float x);
 float tim (float x);
+int fibronaci(int x);
+int palindrome(int x);
+int armstrong(int x);
+int prime(int x);
 
 int main()
 {
     char q;
-    int t,s,f,l;
-    float  w,r,z,m, e,sum,  minus,multi,div;
+    int t,s,f,l,i,j,o,n,temp2;
+    float  w,r,z,m, e,sum, minus,multi,div,arr[110];
     while(2)
     {
     printf("Enter the charecter to proceed:\n\ta: Aritmatic operation\n\tb: Trigonometric operation\n\tc: Area, volume, interest,and leap year calculator:\n\t" );
@@ -325,14 +329,75 @@ int main()
                         }
                     break;    
 
+                case 'e' :
+
+                break;
+
+                case 'f' :
+                     printf("Enter:\n\t1: generate fibonaci number\n\t2: check palindrome number\n\t3: generate armstrong number\n\t4: generate prime number\n\t5: sort the list\n\t6: find a number from the lit\n\t");
+                        scanf("%d",&s);
+                        
+                        switch(s)
+                        {
+                            case 1:
+                                printf("please enter the  limit:\n\t");
+                                scanf("%d",&l);
+                                o = fibronaci(l);
+                                return o;
+                            break;
+                            case 2:
+                                printf("please enter the  limit: \n\t");
+                                scanf("%d",&l);
+                                o = palindrome(l);
+                                return o;
+                            break;
+                            case 3:
+                                printf("please enter the  limit: \n\t");
+                                scanf("%d",&l);
+                                o = armstrong(l);
+                                return o;
+                            break;
+                            case 4:
+                                printf("please enter the  limit: \n\t");
+                                scanf("%d",&l);
+                                o = prime(l);
+                                return o;
+                            break;
+                            case 5: 
+                                printf("enter the array size:\n\t");
+                                scanf("%d",&f);
+                                printf("Enter the elements of the array: \n\t");
+                                for(i = 0;i<f;i++)
+                                {
+                                scanf("%f",&arr[i]);
+                                }
+                                
+                                for(i = 0;i<f-1;i++)
+                                {
+                                    for(j = 0;j = f-1-i;j++)
+                                    {
+                                        if(arr[j]>arr[j+1])
+                                        {
+                                        temp2 = arr[j];
+                                        arr[j] = arr[j+1];
+                                        arr[j+1] = temp2;
+                                        }
+                                    }
+                                }
+                                for(i=0;i<n;i++)
+                                    printf("%f",arr[i]);
+                            break;
+
+                        }                        
+                                
             
-                
-                
-                    
-        }
-    
+            
+        
     }
-    return 0;
+
+}
+    
+
 }
 float addition(float x, float y)
 {
@@ -432,5 +497,76 @@ float tim (float x)
     b = x/60;
     return b;
 }
+int fibronaci(int x)
+    {
+        int i,r=0,d=1,m;
+        for(i=1;i<=x;i++)
+        {
+            printf("%d",r);
+            m = r +d;
+            r =d;
+            d = m;
+            
+        }
+    }
+    
+int palindrome(int x)
+{
+    int i,r=0,temp=i,d=0;
+    for(i=0;i<=x;i++)
+    {
+  
+        while(temp)
+        {
+            r = temp%10;
+            d +=10+r;
+            temp = r/10;
+            
+        }
+        if(i==d)
+        {
+            printf("%d",i);
+        }
+        
+    }
+    
+
+}
+int armstrong(int x)
+{
+    int i,r=0,temp=i,d=0;
+    for(i=0;i<=x;i++)
+    {
+      while(temp)
+      {
+           r = temp%10;
+            d = d*10+pow(r,3);
+            temp = r/10;
+      }
+      printf("%d",d);
+       if(i == d)
+        {
+            printf("%d",i);
+        }
+    }
+}
+int prime(int x)
+{
+    int i,j,r,temp= i,d=0;
+    for(i=0;i<=x;i++)
+    {
+        for(j=0;j<=temp;j++)
+        {
+            if(temp%j ==0)
+            {
+                d++;
+            }
+           
+        }
+         if(d == 2)
+         printf("%d",temp);
+    }
+}
+
 
 
