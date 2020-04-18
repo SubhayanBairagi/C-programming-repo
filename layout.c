@@ -326,7 +326,82 @@ int main()
 
                             }
                         }
-                    break;    
+                    break;
+                    case 'e':
+
+                    break;
+
+                    case 'f':
+
+                    break;
+                    
+                    case 'g':
+                            while(2)
+                            {
+                            printf("Enter\n\t1: exponential\n\t2: root\n\t3: mod calulator\n\t4: HCD and LCM\n\t5: factorial generator\n\t6: to exit\n\t");
+                            scanf("%d",&t);
+
+                            switch(t)
+                            {
+                                case 1:
+                                    printf("enter the number and the power: \n\t");
+                                    scanf("%f%f",&w,&r);
+                                    m = pow(w,r);
+                                    printf("%f\n\t",m);
+                                break;
+                                case 2: 
+                                    printf("enter the number:\n\t");
+                                    scanf("%f",&w);
+                                    m = sqrt(w);
+                                    printf("%f\n\t",m);
+                                break;
+                                case 3:
+                                    printf("Enter the number: \n\t");
+                                    scanf("%f",&w);
+                                    if(w<0)
+                                        printf("the modified number is: %f\n\t",w*-1);
+                                    else
+                                        printf("the is allready a positive entity: %f\n\t",w);
+                                break;
+                                case 4: 
+                                    printf("please enter two numbers: \n\t");
+                                        scanf("%d%d",&i,&j);
+                                        o =i;
+                                        n =j;
+                                        while(n!=0)
+                                        {
+                                            temp2 = n;
+                                            n = o%n;
+                                            o = temp2;
+                                        }
+                                        l = (i*j)/o;
+                                        printf("the HCF and LCM is: %d,%d\n\t",o,l);
+                                break;
+                                case 5:
+                                    printf("Enter the number: \n\t");
+                                    scanf("%d",&l);
+                                    o =1;
+                                for (i = 1; i <= l; ++i) {
+                                    o *= i;
+                                    }
+                                    printf("Factorial of %d = %llu\n\t", l,o);
+                                break;
+                                case 6:
+                                    exit(0);
+                                break;
+                                default:
+                                    printf("please enter a valid option\n\t");
+                                break;
+                            }
+                                    
+                            }    
+                        case '*':
+                            exit(0);
+                        break;
+
+                        default:
+                            printf("please enter a valid option and try again: \n\t");
+                        break;
 
 
              } 
