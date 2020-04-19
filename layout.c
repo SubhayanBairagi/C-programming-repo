@@ -28,6 +28,8 @@ int main()
     float  w,r,z,m, e,sum, minus,multi,div;
     while(2)
     {
+    printf("\n\n\t\t@===============:::::WELCOME TO THE UTILITY APP:::::==================@\n\n\t\t");
+    printf("\n\n\t\t-----By: Subhayan.-----\n\n\t\t");
     printf("Enter the charecter to proceed:\n\ta: Aritmatic operation\n\tb: Trigonometric operation\n\tc: Area, volume, interest,and leap year calculator:\n\t" );
     printf("d: Physical quantity converter:\n\te: number  system converter:\n\tf:NUmber generetor, list sorting and finding calculation:\n\t");
     printf("g: Complex Arithmatic Operations\n\t");
