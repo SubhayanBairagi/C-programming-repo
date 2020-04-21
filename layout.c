@@ -17,9 +17,8 @@ float temp (float x);
 float height (float x);
 float length (float x);
 float tim (float x);
-int fibronaci(int x);
-int palindrome(int x);
-int armstrong(int x);
+int dectobin (int n);
+int bintodec(int n);
 
 int main()
 {
@@ -330,6 +329,113 @@ int main()
                         }
                     break;
                     case 'e':
+                         while(2)
+                        {
+                        printf("Enter\n\t1: BINARY TO DECIMAL\n\t2: DECIMAL TO BINARY\n\t3: BINARY TO OCTAL\n\t4: OCTAL TO BINARY\n\t5: DECIMAL TO HEXADECIMAL\n\t6: HEXADECIMAL TO DECIMAL\n\t");
+                        printf("7: HEXADECIMAL TO BINARY\n\t8: BINARY TO HEXADECIMAL\n\t9: OCTAL TO DECIMAL\n\t10. DECIMAL TO OCTAL\n\t11: OCTAL TO HEXADECIMAL\n\t12: to exit\n\t");
+                        scanf("\n%d",&s);
+
+                        switch(s)
+                        {
+                            case 1: 
+                                printf("Enter a binary number: ");
+                                scanf("%d", &n);
+                                l = bintodec( n);
+                                printf("the decimal equivalent number is: %d\n\t",l);
+                            break;
+
+                            case 2:
+                                    printf("Enter a decimal number: ");
+                                    scanf("%d", &n);
+                                    l = bintodec( n);
+                                    printf("The binary equivalent number is: %d\n\t",l);
+                                    
+                            break;
+
+                            case 3: 
+                                    printf("Enter the binary number: \n\t");
+                                    scanf("%d",&n);
+                                    l = bintodec(n);
+                                    printf("the octal equivalent number is : %o\n\t",l);
+
+
+                            break;
+
+                            case 4:
+                                    printf("Enter the octal number: \n\t");
+                                    scanf("%o",&n);
+                                    l = dectobin(n);
+                                    printf("The binary equivalent number is: %d\n\t",l);
+                                
+                            break;
+
+                            case 5:
+                                    printf("Enter the decimal number: \n\t");
+                                    scanf("%d",&n);
+                                    printf("The hexadecimal equivalent number is: %x\n\t",n);
+                                
+
+                            break;
+
+                            case 6:
+                                    printf("Enter the hexadecimal number(words are in lowercase): \n\t");
+                                    scanf("%x",&n);
+                                    printf("the decimal equivalent number is : %d\n\t",n);
+
+
+                            break;
+
+                            case 7:
+                                printf("Enter the hexadecimal number: \n\t");
+                                    scanf("%x",&n);
+                                    l = dectobin(n);
+                                    printf("the binary equivalent number is : %d\n\t",l);
+
+
+                            break;
+
+                            case 8:
+                            printf("Enter the binary number: \n\t");
+                                    scanf("%d",&n);
+                                    l = bintodec(n);
+                                    printf("the hexadecimal equivalent number is : %d\n\t",l);
+
+
+                            break;
+
+                            case 9:
+                                    printf("Enter the octal number: \n\t");
+                                    scanf("%d",&n);
+                                    printf("the decimal equivalent number is : %d\n\t",n);
+
+                            break;
+
+                            case 10:
+                                    printf("Enter the decimal number: \n\t");
+                                    scanf("%d",&n);
+                                    printf("the octal equivalent number is : %o\n\t",n);
+
+
+                            break;
+
+                            case 11:
+                            printf("Enter the octal number: \n\t");
+                                    scanf("%o",&n);
+                                    printf("the hexadecimal equivalent number is : %x\n\t",n);
+
+
+                            break;
+
+                            case 12:
+                                exit(0);
+
+                            break;
+
+
+
+                        }
+                        }
+
 
                     break;
 
@@ -509,4 +615,29 @@ float tim (float x)
     float b;
     b = x/60;
     return b;
+}
+int bintodec(int n)
+{   int rem = 0,def = 0,i = 0;
+    while(n!=0)
+    {
+        rem = n%10;
+        def = def+rem*pow(2,i);
+        n = n/10;
+        i++;
+    }
+   return def;
+}
+int dectobin (int n)
+{
+     int rem = 0,def = 0,i=1;
+     while(n!=0)
+     {
+        rem = n%2;
+        def = def+rem*i;
+        n = n/2;
+        i = i*10;
+     }
+    return def;
+     
+    
 }
