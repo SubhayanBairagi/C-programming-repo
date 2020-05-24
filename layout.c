@@ -19,12 +19,14 @@ float length (float x);
 float tim (float x);
 int dectobin (int n);
 int bintodec(int n);
+void bubble_sort(long [], long);
 
 int main()
 {
     char q;
-    int t,s,f,l,i,j,o,n,temp2,arr[100];
+    int t,s,f,l,i,j,o,n,temp2,arr[100],a =0,b=1,c=0,rem =0,def = 0;
     float  w,r,z,m, e,sum, minus,multi,div;
+     long array[100], k, g;
     while(2)
     {
     printf("\n\n\t\t@===============:::::WELCOME TO THE UTILITY APP:::::==================@\n\n\t\t");
@@ -440,6 +442,43 @@ int main()
                     break;
 
                     case 'f':
+                    printf("Enter\n\t1: FIBRONACI NUMBER GENERATOR\n\t2: ARMSTRONG NUMBER GENERATOR\n\t3: 25. PALINDROME GENERATOR\n\t");
+                    printf("4: PRIME NUMBER GENERATOR\n\t5: SORTING HELPER\n\t6: FINDER\n\t");
+                    scanf("%d",&s);
+
+                    switch(s)
+                    {
+                        case 1:
+                             printf("Enter the limit: \n\t");
+                            scanf("%d",&n);
+                            printf("%d ",a);
+                            for(i =0;i<=n;i++)
+                            {
+                                a = b;
+                                b = c;
+                                c = a+b;
+                                printf(" %d ",c);
+                            } 
+                        case 2: 
+
+                        break;
+                        case 3:
+
+                        break;
+                        case 4:
+
+                        break;
+                        case 5:
+                        
+                        break;
+                        case 6:
+
+                        break;
+                        case 7:
+                            exit(0);
+                        break;
+
+                    }
 
                     break;
                     
@@ -640,4 +679,19 @@ int dectobin (int n)
     return def;
      
     
+}
+void bubble_sort(long list[], long n)
+{
+  long c, d, t;
+
+  for (c = 0 ; c < n - 1; c++) {
+    for (d = 0 ; d < n - c - 1; d++) {
+      if (list[d] > list[d+1]) {
+        /* Swapping */
+        t         = list[d];
+        list[d]   = list[d+1];
+        list[d+1] = t;
+      }
+    }
+  }
 }
