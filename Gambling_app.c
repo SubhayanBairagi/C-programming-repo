@@ -4,7 +4,7 @@
 int main()
 {
     char get[100],ch;
-    int i,k,j,arr[100],n;
+    int i,k,j,arr[100],n,sum;
     for(j=0;j<6;j++)
     {
         for(k=0;k<26;k++)
