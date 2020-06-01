@@ -13,7 +13,7 @@ int main()
         }
         printf("\n");
     }
-    printf("\t\n\tHi there, welcome to this gambling app\n\tPlease enter your name: ");
+    printf("\t\n\tHi there, welcome to this gambling app,it is made by Subhayan Bairagi\n\tPlease enter your name: ");
     gets(get);
     printf("\tHello %s,",get);
     while(2){
