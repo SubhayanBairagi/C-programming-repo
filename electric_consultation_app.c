@@ -10,7 +10,7 @@ struct cite
 int main()
 {   
     int p,i,j,x;
-    float k,g,h,v,l;
+    float k,g,val,v,l;
     printf("\n\n\t\t@=============YO MOTHYERFUCKING NIGGA OR WHITE FELLA(I dont care whatever you are)WELCOME TO THIS MOTHERFUCKING CONSULTING APPLICATION==========@\n\n");
     printf("\t\they it is made by subhayan, version 1.2.0, wait for the  new realease you whore\n\n");
     printf("\n\t\tinput the number of citerias : ");
@@ -40,7 +40,7 @@ int main()
     {
         printf("\n\t\tlow limit %.2f\t to \thigh limit %.2f\t \tprice per unit at : %.2f\n",mf[i].low,mf[i].high,mf[i].price);
     }
-    for(i=0;i<p;i++)
+    /*for(i=0;i<p;i++)
     {
         for(j=0;j<p-i;j++)
         {
@@ -50,13 +50,19 @@ int main()
                l += ((mf[x].high-mf[x].low)*mf[x].price);
            }
            v=((k-mf[i+j].low)*mf[i+j].price);
-
-            
-           printf("\n\n\t\tyou have to pay %.2f for your conumption of %.2f units\n",v+l,k);
+            printf("\n\n\t\tyou have to pay %.2f for your conumption of %.2f units\n",v+l,k);
         }
         }
-        break;
+    }*/
+    val = k;
+    for(i=p-1;i>=0;i--)
+    {
+        if(k==0)
+            break;
+        l+=(k-mf[i].low)*mf[i].price;
+        k = mf[i].low;
     }
+    printf("\n\n\t\tyou have to pay %.2f for your conumption of %.2f units\n",l,val);
     if(k>0&&k<500)
         printf("\t\tMESSAGE: 'GREEN'\t you done well motherfucker\n");
     else if(k>500&&k<1000)
@@ -67,6 +73,4 @@ int main()
         printf("\t\tMESSAGE: RED \t yo! madafaqua listen immediatly reduce the consumption if extra %f fucking units",k-1500);
     else if(k>2000)
         printf("\t\tMESSAGE:  CRITICAL \t reduce the consumption of %.2f units or be prepared to be gangbanged by the bank and the electic compan",k-2000);
-    
-
-}
+    }
